@@ -2,24 +2,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: newapp
+  name: todoapp
   labels:
-    app: newapp
+    app: todoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: newapp
+      app: todoapp
   # pod spec begins here
   template:
     metadata:
       labels:
-        app: newapp
+        app: todoapp
     spec:
       containers:
-        - name: newapp
+        - name: todoapp
           image: registry.digitalocean.com/golvachi-doreg/flask-kube:0.0.1
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8888
+            - containerPort: 5000
 

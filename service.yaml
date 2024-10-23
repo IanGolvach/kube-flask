@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: newapp
+  name: todoapp
 spec:
   ports:
-  - port: 8888
+  - port: 5000
     protocol: TCP
-    targetPort: 8888
+    targetPort: 5000
   selector:
-    app: newapp
+    app: todoapp
   type: LoadBalancer
 
